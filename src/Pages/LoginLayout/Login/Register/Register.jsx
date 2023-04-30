@@ -7,6 +7,7 @@ const Register = () => {
     const { createUser } = useContext(AuthContext);
     const [success, setSuccess] = useState('');
     const [error, setError] = useState('');
+    const [accept,setAccept]=useState(false)
 
     const handleSubmitRegister = event => {
         //    console.log(event.target);
@@ -36,6 +37,10 @@ const Register = () => {
                 setError(error.message)
             })
     }
+
+    const handleCheck=event=>{
+        setAccept(event.target.checked);
+    }
     return (
         <Container className='w-50 mx-auto login-info'>
             <h3 className='text-center'>Register your account</h3>
@@ -60,14 +65,18 @@ const Register = () => {
                     <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" name='conditions' label="Accept Term & Conditions" required />
+                    <Form.Check 
+                     onClick={handleCheck}
+                    type="checkbox" 
+                    name='conditions'
+                     label={<>Accept <Link to='/terms'>Term & Conditions</Link></>} required />
                 </Form.Group>
-                <Button className='w-100 ' variant="primary" type="submit">
+                <Button className='w-100 ' disabled={!accept} variant="primary" type="submit">
                     Register
                 </Button>
             </Form>
             <Form.Text className="text-muted ">
-                <span>Dont’t Have An Account ?</span><Link to='/register'>Register</Link>
+                <span>Dont’t Have An Account ?</span><Link to='/login'>Login</Link>
             </Form.Text>
             <Form.Text className="text-muted"> <br />
             <p className='text-danger'>{error}</p>

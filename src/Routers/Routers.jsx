@@ -10,6 +10,7 @@ import LoginLayout from "../Layouts/LoginLayout";
 import Login from "../Pages/LoginLayout/Login/Login/Login";
 import Register from "../Pages/LoginLayout/Login/Register/Register";
 import PrivetRouter from "../PrivetRouter/PrivetRouter";
+import Terms from "./Terms";
 
 
 
@@ -29,6 +30,10 @@ import PrivetRouter from "../PrivetRouter/PrivetRouter";
         {
           path:'register',
           element:<Register></Register>
+        },
+        {
+          path:'/terms',
+          element:<Terms></Terms>
         }
       ]
 
