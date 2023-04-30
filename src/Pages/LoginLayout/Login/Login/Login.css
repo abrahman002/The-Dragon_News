@@ -1,0 +1,15 @@
+body {
+    background: #F3F3F3;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 20px 50px;
+}
+
+.login-info {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 20px 50px;
+    /* width: 662px; */
+    /* height: 400px; */
+}

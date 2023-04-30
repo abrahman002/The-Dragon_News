@@ -1,0 +1,10 @@
+.info a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: rgba(116, 124, 127, 0.672);
+}
+
+.login a{
+    text-decoration: none;
+    color: beige;
+}

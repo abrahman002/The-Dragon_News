@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, ListGroup } from 'react-bootstrap';
 import { FaGithub, FaGoogle,FaFacebook,FaTwitter,FaInstagram } from 'react-icons/fa';
 import Qzone from '../Qzone/Qzone';
+import RightCard from './RightCard';
 
 const RightNav = () => {
     return (
@@ -21,6 +22,7 @@ const RightNav = () => {
             </div>
             <div>
                 <Qzone></Qzone>
+                
             </div>
         </div>
 
