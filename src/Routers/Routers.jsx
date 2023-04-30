@@ -45,7 +45,7 @@ import Terms from "./Terms";
         {
           path:':id',
          element:<Category></Category>,
-         loader:({params})=>fetch(`http://localhost:5000/categories/${params.id}`)
+         loader:({params})=>fetch(`https://the-news-dragon-server-abdurrahmanislamhossainx223-gmailcom.vercel.app/categories/${params.id}`)
         }
       ]
     },
@@ -56,7 +56,7 @@ import Terms from "./Terms";
         {
           path:':id',
           element:<PrivetRouter><News></News></PrivetRouter>,
-          loader:({params}) => fetch(`http://localhost:5000/news/${params.id}`)
+          loader:({params}) => fetch(`https://the-news-dragon-server-abdurrahmanislamhossainx223-gmailcom.vercel.app/news/${params.id}`)
         }
       ]
     }
